@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-04-26
+  Changes:
+    - Initial scaffold: directory structure, settings, utility framework, and planet stubs.
+    - All 293 optional planet/QoL mod dependencies listed in info.json.
+    - Tech-tree tier system skeleton in compat/tech-tree.lua.
+    - Recipe conflict detection skeleton in compat/conflicts.lua.
+    - Surface condition patch skeleton in compat/surface-conditions.lua.
+    - Individual compat stubs for ~40 planet mods.
