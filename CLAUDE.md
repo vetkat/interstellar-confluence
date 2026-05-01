@@ -67,10 +67,11 @@ The following planet mods have **unverified prototype/tech names** because no pu
 - velora — planet name + tech name + prerequisites
 - planet-pack: crucible + erimos_prime names/techs
 
-To verify in-game, load a save with the mod active and run:
+To verify in-game, load a save with the mod active and run in the console.
+Note: `data.raw` is data-stage only and is nil at runtime. Use `prototypes` instead:
 ```lua
-/c for name, _ in pairs(data.raw.planet) do log(name) end
-/c for name, t in pairs(data.raw.technology) do if name:find("discovery") then log(name) end end
+/c for name, _ in pairs(prototypes.planet) do game.print(name) end
+/c for name, _ in pairs(prototypes.technology) do if name:find("discovery") then game.print(name) end end
 ```
 
 ## What is verified
