@@ -68,10 +68,11 @@ The following planet mods have **unverified prototype/tech names** because no pu
 - planet-pack: crucible + erimos_prime names/techs
 
 To verify in-game, load a save with the mod active and run in the console.
-Note: `data.raw` is data-stage only and is nil at runtime. Use `prototypes` instead:
+Note: `data.raw` is data-stage only and is nil at runtime. Use `prototypes` instead,
+and use `log()` so output goes to `factorio-current.log` (readable externally):
 ```lua
-/c for name, _ in pairs(prototypes.planet) do game.print(name) end
-/c for name, _ in pairs(prototypes.technology) do if name:find("discovery") then game.print(name) end end
+/c for name, _ in pairs(prototypes.planet) do log(name) end
+/c for name, _ in pairs(prototypes.technology) do if name:find("discovery") then log(name) end end
 ```
 
 ## What is verified
