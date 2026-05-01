@@ -71,7 +71,7 @@ To verify in-game, load a save with the mod active and run in the console.
 Note: `data.raw` is data-stage only and is nil at runtime. Use `prototypes` instead,
 and use `log()` so output goes to `factorio-current.log` (readable externally):
 ```lua
-/c for name, _ in pairs(prototypes.planet) do log(name) end
+/c for name, _ in pairs(game.planets) do log(name) end
 /c for name, _ in pairs(prototypes.technology) do if name:find("discovery") then log(name) end end
 ```
 
