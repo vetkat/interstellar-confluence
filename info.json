@@ -2,9 +2,9 @@
   "name": "interstellar-confluence",
   "version": "0.1.0",
   "title": "Interstellar Confluence",
-  "author": "",
+  "author": "vetkat",
   "contact": "",
-  "homepage": "",
+  "homepage": "https://github.com/vetkat/interstellar-confluence",
   "description": "Compatibility and balancing layer for all major community planet mods. Ensures a coherent tech-tree progression, resolves recipe conflicts, and adds cross-planet connections when multiple planet mods are installed together. Does not redistribute or modify any other mod's content.",
   "factorio_version": "2.0",
   "dependencies": [

@@ -72,11 +72,30 @@ Everything is opt-out via startup settings. Installing the mod with no planet mo
 ### From the Factorio mod portal
 Search for **Interstellar Confluence** in the in-game mod browser.
 
-### Manual / development
+### Manual (native Linux)
 ```bash
-ln -s /path/to/this/repo ~/.factorio/mods/interstellar-confluence_0.1.0
+cp -r interstellar-confluence ~/.factorio/mods/interstellar-confluence_0.1.0
 ```
-Then enable the mod in Factorio's mod manager alongside whichever planet mods you want.
+
+### Manual (Steam on Linux via Proton)
+Steam runs Factorio through the Windows compatibility layer (Proton), so the mods directory is inside the Proton prefix:
+```bash
+PROTON_MODS="$HOME/.local/share/Steam/steamapps/compatdata/427520/pfx/drive_c/users/steamuser/AppData/Roaming/Factorio/mods"
+cp -r interstellar-confluence "$PROTON_MODS/interstellar-confluence_0.1.0"
+```
+
+### Development workflow (Proton)
+The repo lives at `~/.factorio/mods/interstellar-confluence_0.1.0/`. After editing files, sync them to the Proton mods directory and then press **F5** in Factorio to reload mods:
+
+```bash
+# Sync once
+./sync.sh
+
+# Or watch for changes and sync automatically
+./sync.sh --watch
+```
+
+`sync.sh --watch` uses `inotifywait` to detect file saves and syncs immediately, so you only need to press F5 in-game to pick up your edits. The git post-commit hook also runs `sync.sh` automatically after every commit.
 
 ## Tier system
 

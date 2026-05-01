@@ -1,2 +1,5 @@
 # Claude Code session memory — not project state
 .claude/
+
+# Local dev sync script — path is machine-specific
+sync.sh
